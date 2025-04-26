@@ -14,5 +14,5 @@ public interface JournalRepository extends JpaRepository<Journal, Integer> {
     List<Journal> findAllByNameInIgnoreCase(List<String> names);
     List<Journal> findAllByName(String name);
     List<Journal> findAllById(Integer id);
-
+    List<Journal> findAllByNameAndId(String name, Integer age);
 }

@@ -2,6 +2,8 @@ package com.example.Practice.Controller.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 @Entity
@@ -16,6 +18,12 @@ are not mapped here.
 No impact, hibernate will ignore the newly added columns until they are defined
 in the entity class. Those columns will be null until mapped again.
 */
+
+/* Getters and setters are annotations we are using from Project Lombok to reduce boilerplate
+code and generating getters and setters automatically at the time of compilation.
+ */
+@Getter
+@Setter
 public class Journal {
 
     @Id
@@ -24,29 +32,28 @@ public class Journal {
     private String name;
     private String description;
 
-
-    public Integer getId(){
-        return id;
-    }
-
-    public void setId(Integer id){
-        this.id = id;
-    }
-
-    public String getName(){
-        return name;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
-
-
-    public void setDescription(String description){
-        this.description = description;
-    }
-
-    public String getDescription(){
-        return description;
-    }
+//    public Integer getId(){
+//        return id;
+//    }
+//
+//    public void setId(Integer id){
+//        this.id = id;
+//    }
+//
+//    public String getName(){
+//        return name;
+//    }
+//
+//    public void setName(String name){
+//        this.name = name;
+//    }
+//
+//    public void setDescription(String description){
+//        this.description = description;
+//    }
+//
+//    public String getDescription(){
+//        return description;
+//    }
 
 }

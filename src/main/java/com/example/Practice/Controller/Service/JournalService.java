@@ -21,7 +21,7 @@ public class JournalService {
     private JournalRepository journalRepository;
 
     //Post Mapping
-    public String saveEntry(@RequestBody Journal myjournal){
+    public String saveEntry(Journal myjournal){
         if(journalRepository.existsById(myjournal.getId())){
             return "Id already exists !!";
         }

@@ -1,4 +1,5 @@
 package com.example.Practice.Controller.Controller;
+import com.example.Practice.Controller.Dto.JournalEntryDto;
 import com.example.Practice.Controller.Entity.Journal;
 import com.example.Practice.Controller.Repository.JournalRepository;
 import com.example.Practice.Controller.Service.JournalService;
@@ -25,7 +26,7 @@ public class JournalEntryDb {
 
     //Post-entries using Post mapping
     @PostMapping
-    public String setAllEntries(@RequestBody Journal myEntry){
+    public String setAllEntries(@RequestBody JournalEntryDto myEntry){
         return journalService.saveEntry(myEntry);
         }
 
@@ -77,6 +78,8 @@ public class JournalEntryDb {
     public ResponseEntity<?> updateJournalById(@RequestBody Journal myEntry){
         return journalService.updateJournalById(myEntry);
     }
+
+//    http://localhost:9090/journal?ids=21
 
     @DeleteMapping
     public ResponseEntity<?> deleteEntryById(@RequestParam List<Integer> ids){

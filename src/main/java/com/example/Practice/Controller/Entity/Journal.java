@@ -24,6 +24,7 @@ code and generating getters and setters automatically at the time of compilation
  */
 @Getter
 @Setter
+@Component
 public class Journal {
 
     @Id
